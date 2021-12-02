@@ -3,7 +3,7 @@
 The point of the project is to manage the sending of emails. See  [https://github.com/digitalmediasolutions/documents/tree/main/o2o-caas](https://github.com/digitalmediasolutions/documents/tree/main/o2o-caas)  for more information.
 
 ## Pre-requisites
-Typescript and running instances of a MongoDB are required for the app to start. The **MongoDB** is used for the rest of the models in the app.
+Node.j v14+ and running instances of a MongoDB and Redis server are required for the app to start. The **MongoDB** is used for the rest of the models in the app.
 
 ## Installation
 Do the following to clone and start the project.
