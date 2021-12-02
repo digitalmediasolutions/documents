@@ -1,6 +1,6 @@
 # digitalmediasolutions/documents
 
-The point of the project is to manage the sending of emails. See  [https://github.com/digitalmediasolutions/documents/tree/main/o2o-caas](https://github.com/digitalmediasolutions/documents/tree/main/o2o-caas)  for more information.
+The point of the project is to manage the sending of emails. See  [https://github.com/digitalmediasolutions/o2o-caas](https://github.com/digitalmediasolutions/o2o-caas)  for more information.
 
 ## Pre-requisites
 Node.j v14+ and running instances of a MongoDB and Redis server are required for the app to start. The **MongoDB** is used for the rest of the models in the app.
@@ -31,8 +31,3 @@ In this app, there are three controllers:
 
 ## Authentication
 
-### Authorization
-
-Endpoint authorization is done using  [@loopback/authorization](https://github.com/strongloop/loopback-next/tree/master/packages/authorization). Use the  `@authorize`  decorator to protect access to controller methods.
-
-All controller methods without the  `@authorize`  decorator will be accessible to everyone. To restrict access, specify the roles in the  `allowedRoles`  property. Here are two examples to illustrate the point.
