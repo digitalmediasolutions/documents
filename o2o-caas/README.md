@@ -8,10 +8,10 @@ Typescript and running instances of a MongoDB are required for the app to start.
 ## Installation
 Do the following to clone and start the project.
 
-$ git clone https://github.com/digitalmediasolutions/documents.git
-$ cd documents
-$ npm i
-$ npm start
+``$ git clone https://github.com/digitalmediasolutions/documents.git``
+``$ cd documents``
+``$ npm i``
+``$ npm start``
 
 ## Models
 This app has the following models:
