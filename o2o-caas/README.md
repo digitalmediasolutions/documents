@@ -25,16 +25,3 @@ Controllers expose API endpoints for interacting with the models and more.
 
 In this app, there are four controllers:
 
-
-
-## Installation
-
-Do the following to clone and start the project.
-
-In case you have Docker installed on your system and don't want to manually install MongoDB and Redis, you can run  `npm run docker:start`  to download their images and start the servers. Otherwise, you can skip this command.
-
-$ git clone https://github.com/loopbackio/loopback4-example-shopping.git
-$ cd loopback4-example-shopping
-$ npm i
-$ npm run docker:start
-$ npm start
