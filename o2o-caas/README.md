@@ -28,3 +28,11 @@ In this app, there are three controllers:
 1.  `account`  - controller for creating account, fetching account info, updating account info and deleting account info.
 2.  `email-template`  - controller for creating email templates, fetching email templates info, updating email templates info and deleting email templates info.
 3.  `account-email`  - controller for sending, updating, deleting account emails.
+
+## Authentication
+
+### Authorization
+
+Endpoint authorization is done using  [@loopback/authorization](https://github.com/strongloop/loopback-next/tree/master/packages/authorization). Use the  `@authorize`  decorator to protect access to controller methods.
+
+All controller methods without the  `@authorize`  decorator will be accessible to everyone. To restrict access, specify the roles in the  `allowedRoles`  property. Here are two examples to illustrate the point.
