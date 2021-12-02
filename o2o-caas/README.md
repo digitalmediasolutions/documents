@@ -23,5 +23,8 @@ This app has the following models:
 
 Controllers expose API endpoints for interacting with the models and more.
 
-In this app, there are four controllers:
+In this app, there are three controllers:
 
+1.  `account`  - controller for creating account, fetching account info, updating account info and deleting account info.
+2.  `email-template`  - controller for creating email templates, fetching email templates info, updating email templates info and deleting email templates info.
+3.  `account-email`  - controller for sending, updating, deleting account emails.
