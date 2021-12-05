@@ -38,3 +38,6 @@ Endpoint authorization is done using **@loopback/express**.
 This package adds middleware support for LoopBack 4 and allows Express middleware to be plugged into LoopBack seamlessly. It's used by @loopback/rest to support Express middleware with InvokeMiddleware action within the REST sequence.
 
 Some controller methods without the authorization will be accessible to everyone.
+
+To use this package, you'll need to install `@loopback/express`.
+``npm i @loopback/express``
