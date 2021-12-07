@@ -2,8 +2,12 @@
 ## Introduction
 The point of the project is to manage the sending of emails. See  [https://github.com/digitalmediasolutions/documents/tree/main/o2o-caas](https://github.com/digitalmediasolutions/documents/tree/main/o2o-caas)  for more information.
 
+>All requests are made to endpoints beginning:
+
+http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com
+
 ## Pre-requisites
-Node.j v14+ and running instances of a MongoDB and Redis server are required for the app to start. The **MongoDB** is used for the rest of the models in the app.
+Node.j v14+ and running instances of a **MongoDB** and **Redis** server are required for the app to start. The **MongoDB** is used for the rest of the models in the app.
 
 ## Installation
 Do the following to clone and start the project.
@@ -52,13 +56,21 @@ This application has refresh token mechanism.
 
 2.  `To refresh the token`: to generate the access token by the refresh token obtained from the the last login endpoint.
 
+### Mail service
+
+Application sends emails for email templates. You can configure send emails either through an SMTP server or a mail API.
+
+>**Nodemailer**
+
+You can send emails through an SMTP server with Nodemailer.
+
 ## Endpoints
 ### Account
 
 | Parameter | Type| Required | Description| 
 |----------|------|-------|--------|
 | email | string | required | The email will supply you that identifies your account.|
-| type | string | Required | The type represent the account type| 
+| type | string | Required | Description| 
 
 In the `AccountController` class in the application , a user can print out their user profile by performing a `GET` request on the`/accounts` endpoint.
 
@@ -88,10 +100,11 @@ Accept: application/json
 Accept-Charset: utf-8
 
 {
-	"email" : {{email}},
-	"type" : {{type}}
+   "email": {{email}},
+   "type": {{type}}
 }
 ```
+
 If successful, you will receive back an access token response:
 ```
 HTTP/1.1 201 OK
@@ -122,24 +135,26 @@ refresh_token={{refresh_token}}
 ### Email Template
 | Parameter | Type| Required | Description| 
 |----------|------|-------|--------|
-| template| string | required | The template will supply you that identifies your email template|
-| type | string | Required | The type represent the template type| 
+| template| string | required | The email will supply you that identifies your account.|
+| type | string | Required | Description| 
 | subject| object| Required | The first text recipients see after your sender name when an email reaches their inbox | 
 | content| object| Required | Any message sent to a person| 
-| variables| array| Required | | 
+| variables| array| Required | Description| 
 
 In the `templateController` class in the application , a user can print out the email template by using  a `GET` request on the`/email-templates` endpoint.
 
 The response will be displayed as follows:
 ```
 {
-	"subject": {{subject}},
-	"content": {{content}},
-	"variables": [],
-	"_id": {{id}},
-	"template": {{template}},
-	"type": {{type}},
-	"created_at": {{created_at}},
+   "subject": {{subject}},
+   "content": {{content}},
+   "variables":[
+      
+   ],
+   "_id": {{id}},
+   "template": {{template}},
+   "type": {{type}},
+   "created_at": {{created_at}},
 }
 ```
 
@@ -150,23 +165,26 @@ Host: http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 Accept-Charset: utf-8
-
 {
-	"template": {{template}},
-	"type": {{type}},
-	"subject": {{subject}},
-	"content": {{content}},
-	"variables": []
+   "template": {{template}},
+   "type": {{type}},
+   "subject": {{subject}},
+   "content": {{content}},
+   "variables":[
+      
+   ]
 }
 ```
 a user can update email template by performing a `PUT` request on the`/email-templates/{id}` endpoint.
 ``` 
 {
-	"subject": {{subject}},
-	"content": {{content}},
-	"variables": [],
-	"template": {{template}},
-	"type": {{type}},
+   "subject": {{subject}},
+   "content": {{content}},
+   "variables":[
+      
+   ],
+   "template": {{template}},
+   "type": {{type}},
 }
 ```
 a user can delete email template by performing a `DELETE` request on the`/email-templates/{id}` endpoint.
@@ -241,11 +259,11 @@ GET http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com/me/d
 The response is a Get object within a data envelope. Example response:
 ``` 
 {
-	"_id": {{id}},
-	"account_id": {{account_id}},
-	"recipient": {{recipient}},
-	"status": {{status}},
-	"created_at": {{created_at}},
+   "_id": {{id}},
+   "account_id": {{account_id}},
+   "recipient": {{recipient}},
+   "status": {{status}},
+   "created_at": {{created_at}},
 }
 ```
 Possible errors:
