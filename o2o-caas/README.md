@@ -56,13 +56,11 @@ This application has refresh token mechanism.
 
 2.  `To refresh the token`: to generate the access token by the refresh token obtained from the the last login endpoint.
 
-### Mail service
+### Mail services
 
-Application sends emails for email templates. You can configure send emails either through an SMTP server or a mail API.
-
->**Nodemailer**
-
-You can send emails through an SMTP server with Nodemailer.
+`SendGrid`
+`SES`
+`Custom`
 
 ## Endpoints
 ### Account
