@@ -1,4 +1,4 @@
-# digitalmediasolutions/documents
+# digitalmediasolutions/o2o-caas
 ## Introduction
 The point of the project is to manage the sending of emails. See  [https://github.com/digitalmediasolutions/documents/tree/main/o2o-caas](https://github.com/digitalmediasolutions/documents/tree/main/o2o-caas)  for more information.
 
