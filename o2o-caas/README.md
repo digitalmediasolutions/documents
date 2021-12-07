@@ -58,7 +58,7 @@ This application has refresh token mechanism.
 | Parameter | Type| Required | Description| 
 |----------|------|-------|--------|
 | email | string | required | The email will supply you that identifies your account.|
-| type | string | Required | Description| 
+| type | string | Required | The type represent the account type| 
 
 In the `AccountController` class in the application , a user can print out their user profile by performing a `GET` request on the`/accounts` endpoint.
 
@@ -122,11 +122,11 @@ refresh_token={{refresh_token}}
 ### Email Template
 | Parameter | Type| Required | Description| 
 |----------|------|-------|--------|
-| template| string | required | The email will supply you that identifies your account.|
-| type | string | Required | Description| 
+| template| string | required | The template will supply you that identifies your email template|
+| type | string | Required | The type represent the template type| 
 | subject| object| Required | The first text recipients see after your sender name when an email reaches their inbox | 
 | content| object| Required | Any message sent to a person| 
-| variables| array| Required | Description| 
+| variables| array| Required | | 
 
 In the `templateController` class in the application , a user can print out the email template by using  a `GET` request on the`/email-templates` endpoint.
 
