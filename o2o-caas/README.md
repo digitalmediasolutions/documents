@@ -16,9 +16,9 @@ $ npm start
 ## Models
 This app has the following models:
 ```
-``Users``  - representing the users of the system.
-`EmailTemplates`  - a model to represent the email request template.
-`EmailDistributions`  - a model to represent the records from SendGrid after sending emails.
+> 1. `Users`  - representing the users of the system.
+> 2. `EmailTemplates`  - a model to represent the email request template.
+> 3. `EmailDistributions`  - a model to represent the records from SendGrid after sending emails.
 ```
 
 ## Controllers
