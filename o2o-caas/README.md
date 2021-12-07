@@ -7,12 +7,12 @@ Node.j v14+ and running instances of a MongoDB and Redis server are required for
 
 ## Installation
 Do the following to clone and start the project.
-
-``$ git clone https://github.com/digitalmediasolutions/documents.git``
-``$ cd documents``
-``$ npm i``
-``$ npm start``
-
+```
+>$ git clone https://github.com/digitalmediasolutions/documents.git``
+>$ cd documents``
+>$ npm i``
+>$ npm start``
+```
 ## Models
 This app has the following models:
 ```
