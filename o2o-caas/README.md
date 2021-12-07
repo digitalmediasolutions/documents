@@ -81,23 +81,24 @@ The response will be displayed as follows:
   "data": [
     {
       "email_service": "sendgrid",
-      "_id": "sdsd",
-      "email": "sdsdsdsd",
-      "type": "sdsdsd",
-      "created_at": "sdsdsdsd",
-      "refresh_token": "sdsdsdsd"
+      "_id": {{id}},
+      "email": {{email}},
+      "type": {{type}},
+      "created_at": {{created_at}},
+      "refresh_token": {{refresh_token}},
     }
   ]
 }
  ```
 a user can create their user profile by performing a `POST` request on the`/accounts` endpoint.
-```json 
+``` 
 POST /api/v1/accounts HTTP/1.1
 Host: http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 Accept-Charset: utf-8
-
+```
+```json
 {
 	"email" : {{email}},
 	"type" : {{type}}
