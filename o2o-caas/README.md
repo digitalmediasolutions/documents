@@ -33,25 +33,15 @@ In this app, there are three controllers:
 
 ### Authentication
 
-Endpoint authorization is done using **@loopback/express**.
-
-This package adds middleware support for LoopBack 4 and allows Express middleware to be plugged into LoopBack seamlessly. It's used by @loopback/rest to support Express middleware with InvokeMiddleware action within the REST sequence.
+In order to send email on behalf of a user's account, you will need an access token. An access token grants limited access to a user’s account.
 
 Some controller methods without the authorization will be accessible to everyone.
-
-To use this package, you'll need to install `@loopback/express`.
->``npm i @loopback/express``
 
 ### Adding JSON Web Tokens
 
 In this section, we will demonstrate how `jwt` was added to the application using the [JSON Web Tokens](https://tools.ietf.org/html/rfc7519) approach.
 
-### Installing @loopback/authentication-jwt
-The application  **already**  has the`@loopback/authentication-jwt`  dependency set up in its  **package.json**
-
-It was installed as a project dependency by performing:
-
->1.  `npm install jsonwebtoken`
+An access cookie (which contains an access JWT token and is short-lived) and a refresh cookie (which contains a refresh JWT token) are set after a successful login. Other services can then use the access token to verify the users who have been authenticated. The JWT secret will have to be shared by all of these services.
 
 ### Endpoints with refresh token
 
