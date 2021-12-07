@@ -58,11 +58,11 @@ This application has refresh token mechanism.
 
 ### Mail services
 
-`SendGrid`
+1. `SendGrid`
 
-`SES`
+2. `SES`
 
-`Custom`
+3. `Custom`
 
 ## Endpoints
 ### Account
