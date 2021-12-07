@@ -17,7 +17,7 @@ $ npm start
 This app has the following models:
 > 1. `Users`  - representing the users of the system.
 > 2. `EmailTemplates`  - a model to represent the email request template.
-> 3. `EmailDistributions`  - a model to represent the records from SendGrid after sending emails.
+> 3. `EmailDistributions`  - a model to represent the records after sending emails.
 
 ## Controllers
 
@@ -28,6 +28,7 @@ In this app, there are three controllers:
 > 1. `user`  - controller for creating user, fetching user info, updating user info and deleting user info.
 > 2. `template`  - controller for creating email templates, fetching email templates info, updating email templates info and deleting email templates info.
 > 3. `app`  - controller for sending, updating, deleting account emails.
+> 4. `Deliverability Insights` - controller for represent the records after sending emails.
 
 ## Services
 
