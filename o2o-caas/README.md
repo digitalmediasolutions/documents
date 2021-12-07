@@ -74,7 +74,7 @@ This application has refresh token mechanism.
 In the `AccountController` class in the application , a user can print out their user profile by performing a `GET` request on the`/accounts` endpoint.
 
 The response will be displayed as follows:
-```json 
+``` 
 {
   "type": "success",
   "message": "Account has been fetched successfully",
@@ -97,15 +97,14 @@ Host: http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 Accept-Charset: utf-8
-```
-```json
+
 {
 	"email" : {{email}},
 	"type" : {{type}}
 }
 ```
 If successful, you will receive back an access token response:
-```json 
+```
 HTTP/1.1 201 OK
 Content-Type: application/json; charset=utf-8
 
@@ -122,7 +121,7 @@ a user can update their user profile by performing a `PUT` request on the`/accou
 a user can delete their user profile by performing a `DELETE` request on the`/accounts/{id}` endpoint.
 
 To acquire a new access token using a refresh token, make the following form-encoded request:
-```json 
+```
 POST /api/v1/accounts HTTP/1.1
 Host: http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com
 Content-Type: application/x-www-form-urlencoded
@@ -143,7 +142,7 @@ refresh_token={{refresh_token}}
 In the `templateController` class in the application , a user can print out the email template by using  a `GET` request on the`/email-templates` endpoint.
 
 The response will be displayed as follows:
-```json 
+```
 {
 	"subject": {{subject}},
 	"content": {{content}},
@@ -156,7 +155,7 @@ The response will be displayed as follows:
 ```
 
 a user can create email template by performing a `POST` request on the`/email-templates` endpoint.
-```json 
+``` 
 POST /api/v1/accounts HTTP/1.1
 Host: http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com
 Content-Type: application/x-www-form-urlencoded
@@ -172,7 +171,7 @@ Accept-Charset: utf-8
 }
 ```
 a user can update email template by performing a `PUT` request on the`/email-templates/{id}` endpoint.
-```json 
+``` 
 {
 	"subject": {{subject}},
 	"content": {{content}},
@@ -203,13 +202,13 @@ Possible errors:
 
 Returns details of the user who has granted permission to the application.
 
-```json 
+``` 
 GET http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com/api/v1/me
 ```
 
 Example request:
 
-```json 
+``` 
 GET /api/v1 HTTP/1.1
 Host: http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com
 Authorization: Bearer
@@ -219,7 +218,7 @@ Accept-Charset: utf-8
 ```
 
 The response is a User object within a data envelope.
-```json 
+``` 
 {
    "type":"success",
    "message":"Account details has been fetched successfully",
@@ -247,11 +246,11 @@ Possible errors:
 ### Deliverability Insights
 Fetch deliverability-insights data on the authenticated user’s profile.
 
-```json 
+``` 
 GET http://o2o-caas-env-v1.eba-mbacrg8k.ap-southeast-1.elasticbeanstalk.com/me/deliverability-insights
 ```
 The response is a Get object within a data envelope. Example response:
-```json 
+``` 
 {
 	"_id": {{id}},
 	"account_id": {{account_id}},
