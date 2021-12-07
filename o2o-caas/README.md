@@ -37,13 +37,13 @@ In order to send email on behalf of a user's account, you will need an access to
 
 Some controller methods without the authorization will be accessible to everyone.
 
-### Adding JSON Web Tokens
+>### Adding JSON Web Tokens
 
 In this section, we will demonstrate how `jwt` was added to the application using the [JSON Web Tokens](https://tools.ietf.org/html/rfc7519) approach.
 
 An access cookie (which contains an access JWT token and is short-lived) and a refresh cookie (which contains a refresh JWT token) are set after a successful login. Other services can then use the access token to verify the users who have been authenticated. The JWT secret will have to be shared by all of these services.
 
-### Endpoints with refresh token
+>### Endpoints with refresh token
 
 This application has refresh token mechanism.
 
